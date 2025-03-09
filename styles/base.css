@@ -30,6 +30,11 @@ header {
     text-align: center;
     font-weight: bold;
 }
+.navbar a:hover {
+    background-color: #444; /* Darker shade for hover effect */
+    color: #f4f4f4;
+    transition: background-color 0.3s ease-in-out;
+}
 
 
 /* Main Layout */
