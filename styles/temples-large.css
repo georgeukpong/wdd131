@@ -59,27 +59,34 @@
         color: #333;
         border-radius: 5px;
     }
+
     /* Hide the hamburger button on large screens */
     .hamburger {
         display: none;
     }
 
-    /* Main Content */
+    /* Centered Main Content */
     main {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
-        gap: 20px;
-        padding: 20px;
         max-width: 1200px;
         margin: auto;
+        padding: 20px;
+        text-align: center;
     }
 
-    /* Image Gallery */
+    /* Positioning Home (h1) Above the Images */
+    h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* Image Gallery - 3 Columns Layout */
     .gallery {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);  /* Creates 3 equal columns */
+        gap: 30px; /* Space between images */
         justify-content: center;
-        gap: 20px;
+        padding: 20px;
     }
 
     figure {
@@ -89,14 +96,15 @@
 
     figure img {
         width: 100%;
-        max-width: 300px;
+        max-width: 350px; /* Adjust image width */
         height: auto;
         border-radius: 5px;
     }
 
     figcaption {
         font-weight: bold;
-        margin-top: 5px;
+        font-size: 18px;
+        margin-top: 10px;
     }
 
     /* Footer */
@@ -108,6 +116,3 @@
         text-align: center;
     }
 }
-
-
-
