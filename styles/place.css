@@ -1,7 +1,12 @@
+:root {
+    --primary-color: #008751; /* Nigerian Green */
+    --secondary-color: #f8f8f8; /* Light Grey Background */
+}
+
 /* General Styles */
 body {
     font-family: 'Playfair Display', serif;
-    background-color: #008751; /* Nigerian Green */
+    background-color: var(--primary-color);
     color: white;
     margin: 0;
     padding: 0;
@@ -11,10 +16,9 @@ body {
 
 /* Header */
 header {
-    background-color: #008751;
+    background-color: var(--primary-color);
     color: white;
     padding: 15px 0;
-    text-align: center;
 }
 
 h1 {
@@ -39,39 +43,45 @@ picture img {
 
 /* Data & Weather Sections */
 .data, .weather {
-    background-color: #f8f8f8;
+    background-color: var(--secondary-color);
     padding: 15px;
-    margin: 10px auto;
+    margin: 10px 0;
     border-radius: 10px;
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
 }
 
-/* Weather Section */
 .weather h2 {
-    text-align: center;
-    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
-/* Small-Screen Weather Icon (Visible Below Heading) */
-.weather .small-screen {
-    display: block;
+/* Weather Icon for Small Screens (SVG) */
+.small-screen {
     width: 50px;
     height: auto;
+    display: block;
     margin: 10px auto;
 }
 
-/* Hide Large-Screen PNG on Small Screens */
-.weather .large-screen {
+/* Hide PNG icon on small screens */
+.large-screen {
     display: none;
 }
 
 /* Footer */
 footer {
-    background-color: #008751;
+    background-color: var(--primary-color);
     color: white;
     padding: 10px 0;
     font-size: 0.9em;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+
+footer p {
+    margin: 5px 0;
+}
+

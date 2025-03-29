@@ -1,16 +1,21 @@
-/* Large Screen Layout */
 @media screen and (min-width: 800px) {
+    :root {
+        --primary-color: #008751;
+        --secondary-color: #f8f8f8;
+    }
+
+    /* Body */
     body {
-        background-color: #ffffff;
         font-family: 'Playfair Display', serif;
         margin: 0;
         padding: 0;
         text-align: center;
+        background-color: white;
     }
 
     /* Header */
     header {
-        background-color: #008751;
+        background-color: var(--primary-color);
         color: white;
         padding: 15px 0;
         font-size: 1.8em;
@@ -31,30 +36,14 @@
         height: auto;
     }
 
-    /* Data & Weather Section */
+    /* Data & Weather Section Styling */
     .data, .weather {
         width: 320px;
-        background-color: rgba(255, 255, 255, 0.95); /* Slight transparency */
+        background-color: rgba(255, 255, 255, 0.95);
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
         position: absolute;
-    }
-
-    /* Floating Header Style */
-    .data h2, .weather h2 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        background-color: #008751;
-        color: white;
-        padding: 12px 16px;
-        border-radius: 8px 8px 0 0;
-        font-size: 1.2em;
-        width: calc(100% + 40px);
-        margin: -20px -20px 10px -20px;
-        overflow: hidden;
     }
 
     /* Positioning */
@@ -68,28 +57,41 @@
         top: 50%;
     }
 
-    /* Hide Small-Screen Icon on Large Screens */
-    .weather .small-screen {
-        display: none;
+    /* Data and Weather Headings */
+    .data h2, .weather h2 {
+        display: flex;
+        align-items: center;
+        position: relative;
+        background-color: var(--primary-color);
+        color: white;
+        padding: 12px 16px;
+        border-radius: 8px 8px 0 0;
+        font-size: 1.2em;
+        width: calc(100% + 40px);
+        margin: -20px -20px 10px -20px;
+        overflow: hidden;
     }
 
-    /* Large-Screen PNG Appears in Front */
-    .weather .large-screen {
+    /* PNG Image in Front of Weather Heading */
+    .weather h2::after {
+        content: url('../images/sunshine_icon2.png'); /* PNG icon in front */
         display: block;
-        width: 100px; /* Adjust size for visibility */
+        width: 50px;
         height: auto;
-        position: relative;
-        margin: 10px auto;
-        z-index: 1; /* Ensures it stays in front */
+        margin-left: 10px;
+    }
+
+    /* Hide SVG icon on large screens */
+    .small-screen {
+        display: none;
     }
 
     /* Footer */
     footer {
-        background-color: #008751;
+        background-color: var(--primary-color);
         color: white;
-        padding: 10px;
+        padding: 8px;
         font-size: 0.9em;
-        text-align: center;
+        margin-top: 15px;
     }
 }
-
