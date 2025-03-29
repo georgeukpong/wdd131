@@ -3,67 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="a layout of a country or place where i live">
+    <meta name="description" content="A layout of a country or place where I live">
     <meta name="author" content="George Ukpong">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/place-large.css">
     
     <!-- Link the script with defer -->
     <script src="scripts/place.js" defer></script>
 
-    
-
     <title>A Beautiful View of Abuja Nigeria</title>
 </head>
 <body>
+
+    <!-- ✅ Single Correct Header -->
     <header>
+        <h1>Abuja Nigeria</h1>
+    </header>
 
-        <header>
-            <h1>Abuja Nigeria</h1>
-        </header>
-        <main>
-            <picture>
-                <source srcset="images/small222.webp" media="(max-width: 799px)">
-                <source srcset="images/large22.webp" media="(min-width: 800px)">
-                <img src="images/large22.webp" alt="A beautiful view of Abuja, Nigeria">
-            </picture>
-            <section class="data">
-                <h2>Data</h2>
-                <p><strong>Area:</strong> 1,769 sq km</p>
-                <p><strong>Population:</strong> 3,564,126</p>
-                <p><strong>Capital:</strong> Abuja</p>
-                <p><strong>Languages:</strong> English, Hausa, Yoruba, Igbo</p>
-                <p><strong>Currency:</strong> Nigerian Naira</p>
-                <p><strong>Time Zone:</strong> UTC+1</p>
-                <p><strong>Calling Code:</strong> +234</p>
-                <p><strong>Internet TLD:</strong> .ng</p>
-            </section>
-            <section class="weather">
-                
-                <!-- Icon for small screens -->
-                <img src="images/sunshine_icon.svg" alt="Weather icon" class="weather-icon small-screen">
-                
-                <!-- Icon for large screens -->
-                <h2>Weather<img src="images/sunshine_icon2.png" alt="Weather icon large" class="weather-icon large-screen"></h2>
-                
-                <p><strong>Temperature:</strong> <span id="temperature">30</span>°C</p>
-                <p><strong>Conditions:</strong> Sunny</p>
-                <p><strong>Wind:</strong> <span id="wind-speed">10</span> km/h</p>
-                <p><strong>Wind Chill:</strong> <span id="windchill">N/A</span></p>
-            </section>
-            
-            
-            
-        </main>
-    
+    <main>
+        <!-- ✅ Background Image -->
+        <picture>
+            <source srcset="images/small222.webp" media="(max-width: 799px)">
+            <source srcset="images/large22.webp" media="(min-width: 800px)">
+            <img src="images/large22.webp" alt="A beautiful view of Abuja, Nigeria">
+        </picture>
 
+        <!-- ✅ Data Section -->
+        <section class="data">
+            <h2>Data</h2>
+            <p><strong>Area:</strong> 1,769 sq km</p>
+            <p><strong>Population:</strong> 3,564,126</p>
+            <p><strong>Capital:</strong> Abuja</p>
+            <p><strong>Languages:</strong> English, Hausa, Yoruba, Igbo</p>
+            <p><strong>Currency:</strong> Nigerian Naira</p>
+            <p><strong>Time Zone:</strong> UTC+1</p>
+            <p><strong>Calling Code:</strong> +234</p>
+            <p><strong>Internet TLD:</strong> .ng</p>
+        </section>
 
+        <!-- ✅ Weather Section with Corrected Icons -->
+        <section class="weather">
+            <h2>Weather</h2>
+
+            <!-- ✅ Small-Screen SVG Icon (Appears Below Heading) -->
+            <img src="images/sunshine_icon.svg" alt="Weather icon" class="weather-icon small-screen">
+            
+            <!-- ✅ Large-Screen PNG Icon (Appears as Background) -->
+            <img src="images/sunshine_icon2.png" alt="Weather icon large" class="weather-icon large-screen">
+
+            <p><strong>Temperature:</strong> <span id="temperature">30</span>°C</p>
+            <p><strong>Conditions:</strong> Sunny</p>
+            <p><strong>Wind:</strong> <span id="wind-speed">10</span> km/h</p>
+            <p><strong>Wind Chill:</strong> <span id="windchill">N/A</span></p>
+        </section>
+
+    </main>
+
+    <!-- ✅ Footer is Now Correctly Positioned -->
     <footer>
         <p>&copy; <span id="copyright-year"></span> 💪 George Ukpong 💪 Nigeria</p>
         <p id="last-modified"></p>
     </footer>
+
 </body>
 </html>

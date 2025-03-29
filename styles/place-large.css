@@ -1,27 +1,16 @@
 /* Large Screen Layout */
 @media screen and (min-width: 800px) {
     body {
+        background-color: #ffffff;
         font-family: 'Playfair Display', serif;
-        background-color: #ffffff; /* White background */
+        margin: 0;
+        padding: 0;
         text-align: center;
-    }
-
-    /* Hide SVG icon on large screens */
-    .small-screen {
-        display: none !important;
-    }
-
-    /* Show PNG icon on large screens */
-    .large-screen {
-        display: block !important;
-        width: 80px; /* Adjust size */
-        height: auto;
-        margin: 10px auto;
     }
 
     /* Header */
     header {
-        background-color: #008751; /* Nigerian Green */
+        background-color: #008751;
         color: white;
         padding: 15px 0;
         font-size: 1.8em;
@@ -42,29 +31,30 @@
         height: auto;
     }
 
-    /* Data & Weather Section Styling */
+    /* Data & Weather Section */
     .data, .weather {
         width: 320px;
-        background-color: rgba(255, 255, 255, 0.95); /* Slight transparency for modern effect */
+        background-color: rgba(255, 255, 255, 0.95); /* Slight transparency */
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
         position: absolute;
     }
 
-    /* Floating Header with Icon Behind */
+    /* Floating Header Style */
     .data h2, .weather h2 {
         display: flex;
         align-items: center;
+        justify-content: center;
         position: relative;
-        background-color: #008751; /* Nigerian Green */
+        background-color: #008751;
         color: white;
         padding: 12px 16px;
-        border-radius: 8px 8px 0 0; /* Rounded only on top */
+        border-radius: 8px 8px 0 0;
         font-size: 1.2em;
-        width: calc(100% + 40px); /* Extend beyond the box */
-        margin: -20px -20px 10px -20px; /* Move up and out */
-        overflow: hidden; /* Ensures the floating effect stays clean */
+        width: calc(100% + 40px);
+        margin: -20px -20px 10px -20px;
+        overflow: hidden;
     }
 
     /* Positioning */
@@ -78,23 +68,28 @@
         top: 50%;
     }
 
-    /* Weather Icon Behind Text */
-    .weather h2 img {
-        position: absolute;
-        right: 10px; /* Adjust to move it behind */
-        top: 50%;
-        transform: translateY(-50%);
-        width: 40px; /* Adjust size */
+    /* Hide Small-Screen Icon on Large Screens */
+    .weather .small-screen {
+        display: none;
+    }
+
+    /* Large-Screen PNG Appears in Front */
+    .weather .large-screen {
+        display: block;
+        width: 100px; /* Adjust size for visibility */
         height: auto;
-        opacity: 0.5; /* Slight transparency */
+        position: relative;
+        margin: 10px auto;
+        z-index: 1; /* Ensures it stays in front */
     }
 
     /* Footer */
     footer {
-        background-color: #008751; /* Nigerian Green */
+        background-color: #008751;
         color: white;
-        padding: 8px;
+        padding: 10px;
         font-size: 0.9em;
-        margin-top: 15px;
+        text-align: center;
     }
 }
+

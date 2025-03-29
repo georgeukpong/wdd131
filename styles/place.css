@@ -6,15 +6,15 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    line-height: 1.6; /* Improves readability */
+    line-height: 1.6;
 }
 
 /* Header */
 header {
-    background-color: #008751; /* Nigerian Green */
+    background-color: #008751;
     color: white;
     padding: 15px 0;
-    text-align: center; /* Ensures title is centered */
+    text-align: center;
 }
 
 h1 {
@@ -41,32 +41,29 @@ picture img {
 .data, .weather {
     background-color: #f8f8f8;
     padding: 15px;
-    margin: 10px 0;
+    margin: 10px auto;
     border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
 }
 
 /* Weather Section */
-.weather {
-    text-align: center;
-}
-
-/* Ensure the small screen icon is below the heading */
 .weather h2 {
-    display: block; /* Change from flex to block */
     text-align: center;
-    margin-bottom: 10px; /* Add spacing */
+    margin-bottom: 10px;
 }
 
-/* Small-screen SVG icon */
-.small-screen {
+/* Small-Screen Weather Icon (Visible Below Heading) */
+.weather .small-screen {
     display: block;
-    width: 50px; /* Adjust size */
+    width: 50px;
     height: auto;
-    margin: 10px auto; /* Centers the icon */
+    margin: 10px auto;
 }
 
-/* Hide large screen PNG icon by default */
-.large-screen {
+/* Hide Large-Screen PNG on Small Screens */
+.weather .large-screen {
     display: none;
 }
 
@@ -76,12 +73,5 @@ footer {
     color: white;
     padding: 10px 0;
     font-size: 0.9em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* Ensures better alignment */
-}
-
-footer p {
-    margin: 5px 0;
+    text-align: center;
 }
