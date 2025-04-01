@@ -1,0 +1,196 @@
+/* Styles for large screens (tablets & desktops) */
+@media screen and (min-width: 768px) {
+
+    /* General Layout */
+    body {
+        background-color: #fff;
+        font-family: 'Playfair Display', serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    /* Header */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        color: white;
+        padding: 20px;
+    }
+
+    header h1 {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    /* Navigation */
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        background-color: #444;
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        padding: 0;
+        margin: 0;
+        gap: 15px;
+    }
+
+    nav ul li {
+        display: inline;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px 15px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Hover effect */
+    nav ul li a:hover {
+        background-color: #f4a261;
+        color: #333;
+        border-radius: 5px;
+    }
+
+    /* Hide the hamburger button on large screens */
+    .hamburger {
+        display: none;
+    }
+
+    /* Centered Main Content */
+    main {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* Positioning Home (h1) Above the Images */
+    h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* Container styling for a 3-column layout with better spacing */
+#temple-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 40px; /* Increased space between rows and columns */
+    padding: 40px; /* More padding to center the layout */
+    justify-content: center;
+}
+
+/* Temple card styling */
+.temple-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+    max-width: 350px; /* Ensures consistent width */
+    margin: auto; /* Centers the card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Consistent row heights */
+.temple-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Temple image styling */
+.temple-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Image hover effect */
+.temple-card img:hover {
+    transform: scale(1.05);
+}
+
+/* Temple name styling */
+.temple-card h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Labels for temple details */
+.temple-card p strong {
+    color: purple;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+/* General paragraph styling */
+.temple-card p {
+    font-size: 14px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.temple-card img {
+    width: 100%; /* Adjust as needed */
+    height: auto;
+    display: block;
+}
+
+
+/* Adjust layout for medium screens */
+@media (max-width: 992px) {
+    #temple-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        gap: 40px;
+    }
+}
+
+/* Adjust layout for small screens */
+@media (max-width: 768px) {
+    #temple-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 column */
+        gap: 30px;
+    }
+}
+
+
+
+
+/* Initial lazy loading effect */
+.lazy-image {
+    opacity: 0;
+    filter: blur(10px);
+    transition: opacity 0.6s ease-out, filter 0.6s ease-out; /* Smooth transition */
+}
+
+/* When the image is loaded, fade it in and remove the blur */
+.lazy-image.loaded {
+    opacity: 1;
+    filter: blur(0);
+}
+
+
+    /* Footer */
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        margin-top: 20px;
+        text-align: center;
+    }
+}
