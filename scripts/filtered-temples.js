@@ -153,7 +153,6 @@ function displayTemples(templeArray) {
     lazyLoadImages(); // Activate lazy loading
 }
 
-// Lazy Load Function Using IntersectionObserver
 function lazyLoadImages() {
     const images = document.querySelectorAll('.lazy-load');
 
@@ -164,12 +163,14 @@ function lazyLoadImages() {
                 img.src = img.getAttribute('data-src'); // Load the actual image
                 img.removeAttribute('data-src'); // Remove data-src to avoid reloading
                 observer.unobserve(img);
+                console.log(`Image loaded: ${img.alt}`); // Debugging line
             }
         });
     }, { rootMargin: '50px', threshold: 0.1 });
 
     images.forEach(img => observer.observe(img));
 }
+
 
 
 // Add Event Listeners to Navigation Links
