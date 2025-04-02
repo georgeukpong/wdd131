@@ -4,26 +4,20 @@ document.getElementById("copyright-year").textContent = new Date().getFullYear()
 // Get the last modified date of the document and update the paragraph
 document.getElementById("last-modified").textContent = "Last Modification: " + document.lastModified;
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     const hamburgerBtn = document.getElementById("hamburger-btn");
     const navMenu = document.getElementById("nav-menu");
 
-    hamburgerBtn.addEventListener("click", function () {
+    hamburgerBtn.addEventListener("click", function() {
         navMenu.classList.toggle("active");
-
-        // Toggle between ☰ (open) and ✖ (close)
-        if (navMenu.classList.contains("active")) {
-            hamburgerBtn.innerHTML = "&#10006;"; // 'X' symbol
-        } else {
-            hamburgerBtn.innerHTML = "&#9776;"; // Hamburger menu symbol
-        }
+        hamburgerBtn.innerHTML = navMenu.classList.contains("active") ? "&#10006;" : "&#9776;";
     });
+
+    // Load all temples initially
+    filterTemples("home");
 });
 
-
-// Complete Temple Data Array
-const temples = [
-    {
+const temples = [{
         name: "Aba Nigeria",
         location: "Aba, Nigeria",
         year: 2005,
@@ -95,27 +89,24 @@ const temples = [
     }
 ];
 
-// Function to Filter Temples Based on Category
 function filterTemples(filterType) {
     let filteredTemples;
-
     switch (filterType) {
         case "old":
-            filteredTemples = temples.filter(temple => temple.year < 1900);
+            filteredTemples = temples.filter(t => t.year < 1900);
             break;
         case "new":
-            filteredTemples = temples.filter(temple => temple.year > 2000);
+            filteredTemples = temples.filter(t => t.year > 2000);
             break;
         case "large":
-            filteredTemples = temples.filter(temple => temple.size > 90000);
+            filteredTemples = temples.filter(t => t.size > 90000);
             break;
         case "small":
-            filteredTemples = temples.filter(temple => temple.size < 10000);
+            filteredTemples = temples.filter(t => t.size < 10000);
             break;
-        default: // "home" or any other case
+        default:
             filteredTemples = temples;
     }
-
     displayTemples(filteredTemples);
 }
 
@@ -166,7 +157,10 @@ function lazyLoadImages() {
                 console.log(`Image loaded: ${img.alt}`); // Debugging line
             }
         });
-    }, { rootMargin: '50px', threshold: 0.1 });
+    }, {
+        rootMargin: '50px',
+        threshold: 0.1
+    });
 
     images.forEach(img => observer.observe(img));
 }
