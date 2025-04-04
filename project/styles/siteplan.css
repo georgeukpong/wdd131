@@ -1,0 +1,59 @@
+/* General Styles */
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF; /* White background for a clean look */
+    color: #000000; /* Black text for readability */
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #008753; /* Green header */
+    color: #FFFFFF; /* White text */
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-left: 5px solid #008753; /* Green accent */
+    background-color: #f9f9f9; /* Light background for separation */
+}
+
+/* Links */
+a {
+    color: #008753; /* Green links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #008753; /* Green footer */
+    color: #FFFFFF; /* White text */
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
