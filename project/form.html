@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product Review Form">
+    <meta name="author" content="George Ukpong">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-large.css">
+    
+    <!-- Link the script with defer -->
+    <script src="scripts/form.js" defer></script>
+
+    <title>Product Review</title>
+</head>
+<body>
+    <header>
+        <h1>Product Review Form</h1>
+    </header>
+
+    <main>
+        <h1>Product Review</h1>
+        <form method="get" action="review.html">
+          <!-- Product Name -->
+          <label for="product">Product Name <span class="required">*</span></label>
+          <select id="product" name="product" required>
+            <option value="" disabled selected>Select a Product ...</option>
+            <!-- Options generated dynamically via JavaScript -->
+          </select>
+      
+          <!-- Overall Rating -->
+          <fieldset>
+            <legend>Overall Rating <span class="required">*</span></legend>
+            <div class="rating-group">
+              <label><input type="radio" name="rating" value="1" id="rate1" required> 1</label>
+              <label><input type="radio" name="rating" value="2" id="rate2"> 2</label>
+              <label><input type="radio" name="rating" value="3" id="rate3"> 3</label>
+              <label><input type="radio" name="rating" value="4" id="rate4"> 4</label>
+              <label><input type="radio" name="rating" value="5" id="rate5"> 5</label>
+            </div>
+          </fieldset>
+      
+          <!-- Installation Date -->
+          <label for="installDate">Date of Installation <span class="required">*</span></label>
+          <input type="date" id="installDate" name="installDate" required>
+      
+          <!-- Useful Features -->
+          <fieldset>
+            <legend>Useful Features (Check all that apply)</legend>
+            <div class="features-group">
+              <label><input type="checkbox" name="features" value="durable" id="feature1"> Durable</label>
+              <label><input type="checkbox" name="features" value="stylish" id="feature2"> Stylish</label>
+              <label><input type="checkbox" name="features" value="affordable" id="feature3"> Affordable</label>
+              <label><input type="checkbox" name="features" value="eco" id="feature4"> Eco-Friendly</label>
+            </div>
+          </fieldset>
+      
+          <!-- Written Review -->
+          <div class="form-section">
+            <label for="review">Written Review <span class="optional">(Optional)</span></label>
+            <textarea id="review" name="review"></textarea>
+          </div>
+      
+          <!-- User Name -->
+          <div class="form-section">
+            <label for="username">Your Name <span class="optional">(Optional)</span></label>
+            <input type="text" id="username" name="username">
+          </div>
+      
+          <!-- Submit Button -->
+          <input type="submit" value="Submit Review">
+        </form>
+      </main>
+      
+
+    <footer>
+        <p>&copy; <span id="copyright-year"></span> 💪 George Ukpong 💪 Nigeria</p>
+        <p id="last-modified"></p>
+    </footer>
+</body>
+</html>
