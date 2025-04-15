@@ -1,0 +1,84 @@
+@media (min-width: 768px) {
+    .top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    nav {
+        order: 2;
+        margin-left: auto;
+    }
+    nav a {
+        color: white !important; /* Ensures white text */
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+    
+    nav a:hover {
+        color: #90ee90; /* Light green hover effect */
+    }
+    
+
+    nav ul {
+        display: flex;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+        justify-content: flex-end;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .product-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .products {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.credit-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: text-decoration 0.3s ease;
+  }
+  
+  .credit-link:hover {
+    text-decoration: underline;
+  }
+  
+  @media (min-width: 768px) {
+    nav ul {
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    .contact-section {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+  
+    .contact-info,
+    .map {
+      flex: 1;
+    }
+  
+    .employees {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+  

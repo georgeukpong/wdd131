@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact FashionNaija – Get in touch with our support team for inquiries, feedback, or collaboration related to Nigerian fashion.">
+  <meta name="author" content="George Ukpong">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/fashionnija.css">
+  <link rel="stylesheet" href="styles/fashionnija-large.css">
+  <script src="scripts/fashionnija.js" defer></script>
+  <title>Contact Us - FashionNaija</title>
+</head>
+
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="logo">
+        <img src="images/fashionnija-logo.png" alt="FashionNaija Logo">
+      </div>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </div>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you! Feel free to reach out using the information below or fill out the contact form.</p>
+    
+    <section class="contact-section">
+      <div class="contact-info">
+        <h2>Headquarters</h2>
+        <p>Lugbe, Abuja, Nigeria</p>
+        <ul>
+          <li><span class="icon">📍</span> Lugbe, Kabusa, Abuja</li>
+          <li><span class="icon">✉️</span> <strong>Email:</strong> info@fashionnija.com</li>
+          <li><span class="icon">📞</span> +234-800-123-4567</li>
+        </ul>
+      </div>
+      <div class="map">
+        <div class="responsive-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63058.41301933076!2d7.3537638!3d8.9582477!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e724ce523c71b%3A0xd9e4fb48232178e7!2sLugbe%20900107%2C%20Federal%20Capital%20Territory!5e0!3m2!1sen!2sng!4v1739285298657!5m2!1sen!2sng"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="team-heading">
+      <h2 id="team-heading">Meet Our Team</h2>
+      <div id="employees" class="employees">
+        <figure>
+          <img id="employee1" src="images/staff2.jpg" alt="John Uchena - Customer Support" loading="lazy">
+          <figcaption>John Uchena - Customer Support</figcaption>
+        </figure>
+        <figure>
+          <img id="employee2" src="images/staff.jpg" alt="Onyinyechi Ede - Client Relations" loading="lazy">
+          <figcaption>Onyinyechi Ede - Client Relations</figcaption>
+        </figure>
+        <figure>
+          <img id="employee3" src="images/staff3.jpg" alt="Uforo Uko - Styling Consultant" loading="lazy">
+          <figcaption>Uforo Uko - Styling Consultant</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="contact-form-section">
+      <h2>Send Us a Message</h2>
+      <form id="contact-form" action="#" method="post">
+        <fieldset>
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" required autocomplete="name">
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" required>
+
+
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit">Submit Message</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="copyright-year"></span> 💪 George Ukpong 💪 Nigeria</p>
+    <p><a href="credits.html" class="credit-link">Credits & Sources</a></p>
+    <p id="last-modified"></p>
+  </footer>
+
+</body>
+</html>

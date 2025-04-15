@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FashionNaija Shop - Explore our latest collection of traditional and modern Nigerian fashion.">
+  <meta name="author" content="George Ukpong">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/fashionnija.css">
+  <link rel="stylesheet" href="styles/fashionnija-large.css">
+  <script src="scripts/fashionnija.js" defer></script>
+  <script src="scripts/cart.js" defer></script>
+  <title>Shop | FashionNaija</title>
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="logo">
+        <img src="images/fashionnija-logo.png" alt="FashionNaija Logo">
+      </div>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </div>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero shop-hero">
+      <div class="hero-content">
+        <img src="images/hero-image4.jpg" alt="Fashion Shop Banner" class="hero-image" loading="lazy">
+        <h2>Discover Unique Nigerian Styles</h2>
+      </div>
+    </section>
+
+    <section class="product-section">
+      <h2>Our Latest Styles</h2>
+      <div class="underline"></div>
+      <div class="products">
+        <div class="product">
+          <img src="images/home-image3.jpg" alt="Ankara Maxi Dress" loading="lazy">
+          <p>Elegant Ankara Maxi</p>
+          <p class="price">₦15,000</p>
+          <button class="shop-btn add-to-cart" data-id="1">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="images/home-image2.jpg" alt="Isi Agu Outfit" loading="lazy">
+          <p>Classic Isi Agu</p>
+          <p class="price">₦25,000</p>
+          <button class="shop-btn add-to-cart" data-id="2">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="images/image7.jpg" alt="Streetwear Set" loading="lazy">
+          <p>Naija Streetwear</p>
+          <p class="price">₦18,000</p>
+          <button class="shop-btn add-to-cart" data-id="3">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="images/image6.jpg" alt="Agbada Design" loading="lazy">
+          <p>Royal Agbada Vibes</p>
+          <p class="price">₦30,000</p>
+          <button class="shop-btn add-to-cart" data-id="4">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="images/image3.jpg" alt="Gele Wrap" loading="lazy">
+          <p>Modern Gele Wrap</p>
+          <p class="price">₦7,500</p>
+          <button class="shop-btn add-to-cart" data-id="5">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="images/image5.jpg" alt="Beaded Set" loading="lazy">
+          <p>Traditional Beaded Set</p>
+          <p class="price">₦8,500</p>
+          <button class="shop-btn add-to-cart" data-id="6">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="images/image4.jpg" alt="Kente Tunic" loading="lazy">
+          <p>Kente Tunic Top</p>
+          <p class="price">₦12,000</p>
+          <button class="shop-btn add-to-cart" data-id="7">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="images/image8.jpg" alt="Adire Skirt" loading="lazy">
+          <p>Adire Print Skirt</p>
+          <p class="price">₦10,000</p>
+          <button class="shop-btn add-to-cart" data-id="8">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="cart-section">
+      <h3>Your Cart</h3>
+      <ul id="cart-items"></ul>
+      <p>Total: <span id="cart-total">₦0</span></p>
+      <button id="clear-cart">Clear Cart</button>
+    </section>
+
+    <section class="review-section">
+      <h2>Product Review</h2>
+      <form method="get" action="review.html">
+        <select id="product" name="product" required>
+          <option value="" disabled selected>Select a Product ...</option>
+        </select>
+
+        <fieldset>
+          <legend>Overall Rating <span class="required">*</span></legend>
+          <div class="rating-group">
+            <label><input type="radio" name="rating" value="1" required> 1</label>
+            <label><input type="radio" name="rating" value="2"> 2</label>
+            <label><input type="radio" name="rating" value="3"> 3</label>
+            <label><input type="radio" name="rating" value="4"> 4</label>
+            <label><input type="radio" name="rating" value="5"> 5</label>
+          </div>
+        </fieldset>
+
+        <label for="installDate">Date of Installation <span class="required">*</span></label>
+        <input type="date" id="installDate" name="installDate" required>
+
+        <fieldset>
+          <legend>Useful Features (Check all that apply)</legend>
+          <div class="features-group">
+            <label><input type="checkbox" name="features" value="durable"> Durable</label>
+            <label><input type="checkbox" name="features" value="stylish"> Stylish</label>
+            <label><input type="checkbox" name="features" value="affordable"> Affordable</label>
+            <label><input type="checkbox" name="features" value="eco"> Eco-Friendly</label>
+          </div>
+        </fieldset>
+
+        <div class="form-section">
+          <label for="review">Written Review <span class="optional">(Optional)</span></label>
+          <textarea id="review" name="review"></textarea>
+        </div>
+
+        <div class="form-section">
+          <label for="username">Your Name <span class="optional">(Optional)</span></label>
+          <input type="text" id="username" name="username">
+        </div>
+
+        <label for="submitBtn" class="visually-hidden">Submit Review</label>
+        <input type="submit" id="submitBtn" value="Submit Review">
+      </form>
+    </section>
+
+    <section class="contact-section">
+      <h2><a href="contact.html">Contact Us</a></h2>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="copyright-year"></span> 💪 George Ukpong 💪 Nigeria</p>
+    <p><a href="credits.html" class="credit-link">Credits & Sources</a></p>
+    <p id="last-modified"></p>
+  </footer>
+</body>
+</html>

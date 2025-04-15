@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Credits | FashionNaija</title>
+  <link rel="stylesheet" href="styles/fashionnija.css" />
+</head>
+<body>
+
+  <header>
+    <div class="top-bar">
+      <div class="logo">
+        <img src="images/fashionnija-logo.png" alt="FashionNaija Logo" />
+      </div>
+    </div>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main style="padding: 2rem; max-width: 800px; margin: auto;">
+    <h1>Credits & Sources</h1>
+    <p>This site is a project for educational purposes. Below are credits for images and text content not originally created by the developer.</p>
+
+    <h2>Image Credits</h2>
+    <ul>
+      <li>Product images from <a href="https://unsplash.com" target="_blank">Unsplash</a>, <a href="https://pexels.com" target="_blank">Pexels</a>, and <a href="https://bellanaija.com" target="_blank">BellaNaija</a>.</li>
+      <li>Hero banner photo from <a href="https://www.unsplash.com" target="_blank">Unsplash</a>.</li>
+    </ul>
+
+    <h2>Text References</h2>
+    <ul>
+      <li>Fashion phrases inspired by articles on <a href="https://www.stylehousefiles.com" target="_blank">Style House Files</a> and <a href="https://www.vogue.com" target="_blank">Vogue</a>.</li>
+    </ul>
+
+    <h2>Fonts & Libraries</h2>
+    <ul>
+      <li>Font: <a href="https://fonts.google.com/specimen/Playfair+Display" target="_blank">Playfair Display</a> from Google Fonts</li>
+    </ul>
+  </main>
+
+  <footer style="text-align: center; padding: 1rem;">
+    <p>&copy; <span id="copyright-year"></span> George Ukpong | FashionNaija</p>
+  </footer>
+
+  <script>
+    document.getElementById("copyright-year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
